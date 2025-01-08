@@ -1,0 +1,21 @@
+*{
+    Font-size: 30px;
+    font-weight: 500;
+}
+
+h3{
+    color:blue;
+}
+
+h5,p{
+    color:rgb(51, 187, 38);
+}
+.myclass{
+    color:rgb(252, 172, 0);
+}
+#myid{
+    color:rgb(47, 248, 248);
+}
+h4{
+    color:darkgoldenrod;
+}
