@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="phone1"></p>
+        <p id="phone2"></p>
+    <script>
+        //create class
+        class student{
+            constructor(name,year){
+                this.name=name;
+                this.year=year;
+            }
+        }
+        phone1=new student("Vivo",2019);
+        phone2=new student("Samsung",2021);
+        document.getElementById("phone1").innerHTML="This is "+phone1.name +". I bought it in "+phone1.year;
+        document.getElementById("phone2").innerHTML="This is "+phone2.name +". My friend bought it in "+phone2.year;
+    </script>
+    </body>
+</html>
