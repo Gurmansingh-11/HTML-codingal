@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>To arrange a given set of numbers</h2>
+        <button onclick="ascending()">Ascending order</button>
+        <button onclick="descending()">Descending order</button>
+        <p id="result"></p>
+        <script>
+            var point=[7,11,18,8,45,99,1,2,78,43,67,24,68,12]
+            document.getElementById("result").innerHTML=point;
+            function ascending(){
+                point.sort(function(a,b){return a-b})
+                document.getElementById("result").innerHTML=point;
+            }
+            function descending(){
+                point.sort(function(a,b){return b-a})
+                document.getElementById("result").innerHTML=point;
+            }
+        </script>
+    </body>
+</html>
