@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="error"></p>
+        <script>
+            try{
+                COMPUTER("Welcome guests")
+            }
+            catch(err){
+                document.getElementById("error").innerHTML=err.message;
+            }
+        </script>
+    </body>
+</html>
