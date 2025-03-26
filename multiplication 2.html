@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="result"></p>
+        <script>
+            async function average(a,b,c) {
+                let response=await a+b+c*3
+                display(response)
+            }
+            function display(some){
+                document.getElementById("result").innerHTML=some;
+            }
+            average(2,4,6)
+        </script>
+    </body>
+</html>
