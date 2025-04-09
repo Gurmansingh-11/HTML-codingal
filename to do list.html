@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h3>To do list</h3>
+        <form id="myForm">
+            <input id="myInput" type="text">
+            <button>Add</button>
+        </form>
+        <script>
+            var myForm=document.getElementById("myForm");
+var myItem=document.getElementById("myItem");
+var myInput=document.getElementById("myInput");
+myForm.addEventListener("submit", function(event){
+  event.preventDefault()
+  createItem(myInput.value)
+})
+function createItem(inputItems){
+  var items='<li>${inputItems}<button onclick="deleteElement(this)">Delete</button> </li>'
+  myItem.insertAdjacentHTML("beforeend", items)
+  myInput.value=""
+  myInput.focus()
+}
+function deleteElement(ElementToDelete){
+  ElementToDelete.parentElement.remove()
+}
+        </script>
+    </body>
+</html>
