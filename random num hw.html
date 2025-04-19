@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            body{
+                font-family: 'Segoe UI', sans-serif;
+                text-align: center;
+                margin-top: 100px;
+                background-color: aquamarine;
+            }
+            #dice{
+                font-size: 100px;
+                margin: 20px;
+                transition: transform 0.3s ease;
+            }
+            button{
+                font-size: 20px;
+                padding: 10px 20px;
+                cursor: pointer;
+                border: none;
+                border-radius: 8px;
+                background-color: black;
+                color: aliceblue;
+            }
+            button:hover{
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Click on 'Press me' to see Random numbers</h1>
+        <h2 id="RandomNo">1</h2>
+        <button onclick="ShowRandomNo()">Press Me</button>
+        <script>
+            function ShowRandomNo(){
+                const diceFaces=['1', '2', '3', '4', '5', '6','7','8','9','10'];
+            const randomNo=Math.floor(Math.random()*10);
+            const dice=document.getElementById('RandomNo');
+            dice.style.transform='rotate(360deg)';
+            setTimeout(()=>{
+                dice.textContent=diceFaces[randomNo];
+                dice.style.transform='rotate(0deg)';
+            },200);
+            }
+        </script>
+    </body>
+</html>
