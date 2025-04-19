@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+        </script>
+        <style>
+            body{
+                position: relative;
+            }
+            p{
+                font-size: 18px;
+            }
+            #section1{padding-top:50px;height:500px;color:white; background-color: orange;}
+            #section2{padding-top:50px;height:500px;color:green; background-color: white;}
+        </style>
+    </head>
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Science</a>
+                </div>
+                <div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#section1">Section 1</a></li>
+                            <li><a href="#section2">Section 2</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="section1" class="container-fluid">
+            <h1>Section 1</h1>
+            <h3>Science</h3>
+            <h5>Science is a systematic and logical process of inquiry that builds and organizes knowledge about the natural and social world, often using evidence and observation to test hypotheses and make predictions. It involves the pursuit of understanding the universe, including its phenomena and how they work. Science is a dynamic field, continually refining and expanding our knowledge</h5>
+            <p>scroll this section</p>
+        </div>
+        <div id="section2" class="container-fluid">
+            <h1>Section 2</h1>
+            <h3>Science</h3>
+            <h5>Galileo Galilei pioneered the experimental scientific method and was the first to use a refracting telescope to make important astronomical discoveries.</h5>
+        </div>
+    </body>
+</html>
