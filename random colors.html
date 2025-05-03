@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+     <body>
+        <button onclick="rgb()">Click me</button>
+        <script>
+            var r=Math.floor(Math.random()*256);
+            var g=Math.floor(Math.random()*256);
+            var b=Math.floor(Math.random()*256);
+            function rgb(){
+            var bgcolor="rgb("+r+","+b+","+g+")";
+            document.body.style.background=bgcolor;
+            }
+        </script>
+     </body>
+</html>
