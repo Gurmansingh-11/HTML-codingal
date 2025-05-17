@@ -16,7 +16,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    background-image: url("flowers bg.jpg");
     font-family: 'Arial', sans-serif;
 }
 .container{
@@ -27,22 +27,23 @@ body{
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     width: 90%;
     max-width: 400px;
+    background-image: url("mobile4.jpg");
 }
 .game-heading{
     margin-bottom: 20px;
     font-size: 2rem;
-    color: blue;
+    color: green;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 p{
     font-size: 1.5rem;
-    color: #555;
+    color: black;
     margin-bottom: 20px;
 }
 #score{
     font-weight: bold;
-    color: #ff5722;
+    color: yellow;
 }
 #gameArea {
     position: relative;
@@ -61,7 +62,7 @@ p{
     position: absolute;
     width: 40px;
     height: 40px;
-    background: radial-gradient(circle, #ff8a65, #ff5722);
+    background: radial-gradient(circle,blue, blue);
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -96,6 +97,28 @@ p{
             <div id="ball"></div>
         </div>
     </div>
+    <script>
+        const ball=document.getElementById("ball");
+        const scoreDisplay = document.getElementById("score");
+        let score = 0;
+        function moveBall() {
+         const gameArea = document.getElementById("gameArea");
+         const maxX = gameArea.clientWidth - ball.clientWidth;
+         const maxY = gameArea.clientHeight - ball.clientHeight;
+         const randomX = Math.floor(Math.random() * maxX);
+         const randomY = Math.floor(Math.random() * maxY);
 
+    ball.style.left = `${randomX}px`;
+    ball.style.top = `${randomY}px`;
+    }
+    ball.addEventListener("click", () => {
+    score++;
+    scoreDisplay.textContent = score;
+    moveBall();
+    });
+    setInterval(() => {
+    moveBall();
+    }, 1000);
+    </script>
    </body>
 </html>
